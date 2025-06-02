@@ -1,0 +1,1 @@
+A Mastermind game developed in C using a Raspberry Pi, offering hands-on experience with low-level programming and in-depth learning of the C language, including hardware interaction and memory management
