@@ -5,55 +5,100 @@ This coursework was submitted for F28HS: Hardware-Software Interface at Heriot-W
 ________________________________________
 🎯 Objective
 To gain hands-on experience with:
+
 •	Direct interaction between embedded hardware and external devices
+
 •	Systems-level programming using C and ARM assembler
+
 •	Timers, GPIO control, hardware resource management
+
 •	Design decisions relevant to performance and resource efficiency
+
 ________________________________________
 🛠️ Hardware Components
+
 •	Raspberry Pi 2/3/4 (not 5)
+
 •	Breadboard
+
 •	2 LEDs
-o	Green LED (Data) → GPIO 26
-o	Red LED (Control) → GPIO 5
+
+  o	Green LED (Data) → GPIO 26
+
+  o	Red LED (Control) → GPIO 5
+
 •	Push Button → GPIO 19
+
 •	16x2 LCD Display
-o	DATA: GPIO 10, 22, 23, 27
-o	Control: GPIO 24 (EN), GPIO 25 (RS), RW to GND
-o	Contrast: Controlled via potentiometer
+
+  o	DATA: GPIO 10, 22, 23, 27
+
+  o	Control: GPIO 24 (EN), GPIO 25 (RS), RW to GND
+
+  o	Contrast: Controlled via potentiometer
+
 •	3.3V power lines, resistors, and jumpers
+
 ________________________________________
 🧩 Game Description
 Mastermind is a two-player game between a codekeeper (RPi) and codebreaker (user). The RPi generates a random sequence (e.g., R G G) from a set of colors (encoded as numbers). The user makes guesses via button inputs, and the system responds using LED blinks and LCD output indicating:
+
 •	Number of exact matches (right color & position)
+
 •	Number of approximate matches (right color, wrong position)
+
 ________________________________________
 🔁 Gameplay Flow
+
 1.	On startup, RPi blinks LEDs spelling out a greeting using the team member’s surname.
+
 2.	A secret code is generated (or passed via command-line).
+
 3.	Player enters a sequence using button presses (e.g., 2 presses = input "2").
+
 4.	Input is confirmed via LED blinking:
+
   o	Red LED blinks once to confirm input
+  
   o	Green LED echoes the number entered
+
 5.	After full input, red LED blinks twice
+
 6.	Feedback:
+
   o	Green LED blinks: exact matches
+  
   o	Red LED blinks once (separator)
+  
   o	Green LED blinks: approximate matches
+
 7.	Display result on LCD
+
 8.	Repeat until success, or max rounds reached
+
 9.	On success: LCD shows "SUCCESS" and attempt count; LEDs blink in celebration
+
 ________________________________________
 🔧 Software Details
+
 🔹 Languages & Tools:
+
   •	C (GNU toolchain)
+  
   •	ARM Assembler (AAPCS conventions)
+  
   •	gcc, as, ld, gdb, Address Sanitizer
+  
   •	Raspberry Pi OS 32-bit
+  
   •	GPIO register access (manual, no external libs)
+
 🔹 Core Files:
+
   •	master-mind.c: Main game logic
+  
   •	mm-matches.s: Matching logic in ARM Assembly
+  
   •	lcdBinary.c: GPIO control prototypes (digitalWrite, pinMode, etc.)
 
 
@@ -72,11 +117,17 @@ Example unit test output:
 
 
 💡 Key Features
+
 •	✅ Pure C and ARM Assembler hybrid implementation
+
 •	✅ Fully functioning hardware-controlled Mastermind game
+
 •	✅ LCD support for displaying match results and final messages
+
 •	✅ Command-line test support
+
 •	✅ Custom blinking greeting using surname vowels/consonants
+
 
 📸 Screenshots / Media
 
@@ -87,6 +138,7 @@ Example unit test output:
 
 
 📚 Learning Outcomes
+
 •	Developed skills in embedded software-hardware integration
 
 •	Gained practical experience with GPIO register manipulation
