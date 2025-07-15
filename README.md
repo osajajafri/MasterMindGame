@@ -1,9 +1,12 @@
 🧠 Mastermind Game on Raspberry Pi (F28HS Systems Programming Coursework)
+
 📌 Overview
+
 This project is an embedded systems implementation of the Mastermind board game, developed in C and ARM Assembly, running on a Raspberry Pi 2/3/4 (not 5). The program simulates the logic of the classic code-breaking game using low-level GPIO control of LEDs, a button, and an LCD display.
 This coursework was submitted for F28HS: Hardware-Software Interface at Heriot-Watt University as part of a 60% weighted assessment.
 ________________________________________
 🎯 Objective
+
 To gain hands-on experience with:
 
 •	Direct interaction between embedded hardware and external devices
@@ -41,6 +44,7 @@ ________________________________________
 
 ________________________________________
 🧩 Game Description
+
 Mastermind is a two-player game between a codekeeper (RPi) and codebreaker (user). The RPi generates a random sequence (e.g., R G G) from a set of colors (encoded as numbers). The user makes guesses via button inputs, and the system responds using LED blinks and LCD output indicating:
 
 •	Number of exact matches (right color & position)
@@ -100,14 +104,18 @@ ________________________________________
   •	mm-matches.s: Matching logic in ARM Assembly
   
   •	lcdBinary.c: GPIO control prototypes (digitalWrite, pinMode, etc.)
-
-
-
+  
+________________________________________
   🧪 Testing & Debugging
+
 Supports command-line flags for testing and automation:
+
 ./cw2                # Default mode
+
 ./cw2 -d             # Debug mode: shows secret & guess results
+
 ./cw2 -s 123         # Set a fixed secret sequence
+
 ./cw2 -u 121 313     # Unit test: returns number of exact & approx. matches
 
 Example unit test output:
