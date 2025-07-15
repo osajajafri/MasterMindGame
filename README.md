@@ -88,8 +88,11 @@ Example unit test output:
 
 📚 Learning Outcomes
 •	Developed skills in embedded software-hardware integration
+
 •	Gained practical experience with GPIO register manipulation
+
 •	Understood time-critical embedded input/output operations
+
 •	Learned to debug low-level code and use unit testing effectively
 
 
