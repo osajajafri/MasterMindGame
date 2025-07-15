@@ -111,11 +111,8 @@ ________________________________________
 Supports command-line flags for testing and automation:
 
 ./cw2                # Default mode
-
 ./cw2 -d             # Debug mode: shows secret & guess results
-
 ./cw2 -s 123         # Set a fixed secret sequence
-
 ./cw2 -u 121 313     # Unit test: returns number of exact & approx. matches
 
 Example unit test output:
