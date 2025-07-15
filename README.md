@@ -56,6 +56,8 @@ ________________________________________
   •	mm-matches.s: Matching logic in ARM Assembly
   •	lcdBinary.c: GPIO control prototypes (digitalWrite, pinMode, etc.)
 
+
+
   🧪 Testing & Debugging
 Supports command-line flags for testing and automation:
 ./cw2                # Default mode
@@ -64,6 +66,8 @@ Supports command-line flags for testing and automation:
 ./cw2 -u 121 313     # Unit test: returns number of exact & approx. matches
 
 Example unit test output:
+
+
 <img width="498" height="699" alt="image" src="https://github.com/user-attachments/assets/e843e91f-27ce-4dc2-9b03-bf190a8592a5" />
 
 
@@ -76,7 +80,11 @@ Example unit test output:
 
 📸 Screenshots / Media
 
+
+
 <img width="595" height="546" alt="image" src="https://github.com/user-attachments/assets/d18e6dd4-1594-4a4a-a7e2-64a2301c3c3b" />
+
+
 
 📚 Learning Outcomes
 •	Developed skills in embedded software-hardware integration
